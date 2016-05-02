@@ -1,0 +1,2 @@
+The premise of this project is that American politicians must speak to their electorate with the level of linguistic sophistication that the electorate understands. As a result, political speeches are great indicators of the state of the American vocabulary. This project then sets out to prove that over the last century, the vernacular used by the average American — representative of the electorate — has been drastically simplified. This will be achieved by doing unique word counts on American political speeches.
+
