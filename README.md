@@ -13,13 +13,13 @@ To date, the results of the primaries have defied prediction after prediction fr
 
 ###Make sure that the right permissions are set on the make file:
 
-	*chmod +x make*
+>*chmod +x make*
 
 ### run the make file wich will in turn scrape the data sources and runn the analytics:
 
 
-	*make*
+>*make*
 
 
-	####note: *runnning make produces two  json files (NJ_data.json and pres_wc.json) these are products of
-	the two scrape funcitions and are necessary to run the mapper.py in the repo*	
+>####note: *runnning make produces two  json files (NJ_data.json and pres_wc.json) these are products of
+the two scrape funcitions and are necessary to run the mapper.py in the repo*	
