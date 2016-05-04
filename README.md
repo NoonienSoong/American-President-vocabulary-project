@@ -48,6 +48,7 @@ _--- To run locally --_-
 
 
 ###Data Sources
-- *"Miller Center." American President-speeches. N.p., n.d. Web. 04 May 2016. <http://millercenter.org/president/speeches>.*
 
--*"The American Presidency Project." The American Presidency Project. N.p., n.d. Web. 04 May 2016. <http://www.presidency.ucsb.edu/>.*
+-  _"Miller Center." American President-speeches. N.p., n.d. Web. 04 May 2016. <http://millercenter.org/president/speeches>._
+
+- _"The American Presidency Project." The American Presidency Project. N.p., n.d. Web. 04 May 2016. <http://www.presidency.ucsb.edu/>._
