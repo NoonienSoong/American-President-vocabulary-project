@@ -13,17 +13,17 @@ To date, the results of the primaries have defied prediction after prediction fr
 
 ###Make sure that the right permissions are set on the make file:
 
->*chmod +x make*
+>*$ chmod +x make*
 
 ### run the make file wich will in turn scrape the data sources and runn the analytics:
 
 
->*make*
+>*$ make*
 
 
 >####note: *runnning make produces two  json files (NJ_data.json and pres_wc.json) these are products of the two scrape funcitions and are necessary to run the mapper.py in the repo*	
 
-Running mapper.py and reducer.py (unique word count for each president):
+##Running mapper.py and reducer.py (unique word count for each president):
 ========================================================================
 
 We used MapReduce to verify the preliminary research that we had already
@@ -31,18 +31,18 @@ conducted using webscrapers, and to process larger amounts of data.
 
 Our input was json-formatted.
 
---- To run on Dumbo ---
+_--- To run on Dumbo (Hadoop cluster) ---_
 
-hadoop jar /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce/hadoop-streaming.jar -numReduceTasks 16 -mapper mapper.py -reducer reducer.py -file mapper.py -file reducer.py -file <input_file> -file list_of_presidents -input </path/to/input_file/hdfs> -output </path/to/output>
+>*$ hadoop jar /opt/cloudera/parcels/CDH-5.4.5-1.cdh5.4.5.p0.7/lib/hadoop-mapreduce/hadoop-streaming.jar -numReduceTasks 16 -mapper mapper.py -reducer reducer.py -file mapper.py -file reducer.py -file <input_file> -file list_of_presidents -input </path/to/input_file/hdfs> -output </path/to/output>*
 
 1. mapper.py, reducer.py, and the input file must be sent using the -file flag as well as specified with the -mapper, -reducer, and -input flags, respectively. "list_of_presidents" must also be sent with the -file flag.
 
 2. The shebang for local use must be removed from mapper.py and reducer.py for the job to run on Dumbo (these are here for local testing).
 
---- To run locally ---
+_--- To run locally --_-
 (we processed some data this way due to intermittent Dumbo issues)
 
-Make sure mapper.py and reducer.py are executable.
+*Make sure mapper.py and reducer.py are executable.*
 
-$ cat <input_file> | ./mapper.py | sort | ./reducer.py | sort
+>*$ cat <input_file> | ./mapper.py | sort | ./reducer.py | sort*
 
