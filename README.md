@@ -27,7 +27,7 @@ To date, the results of the primaries have defied prediction after prediction fr
 ========================================================================
 
 We used MapReduce to verify the preliminary research that we had already
-conducted using webscrapers, and to process larger amounts of data.
+conducted using webscrapers, and to process larger amounts of data (please see data sources). 
 
 Our input was json-formatted.
 
@@ -46,3 +46,8 @@ _--- To run locally --_-
 
 >*$ cat <input_file> | ./mapper.py | sort | ./reducer.py | sort*
 
+
+###Data Sources
+* "Miller Center." American President-speeches. N.p., n.d. Web. 04 May 2016. <http://millercenter.org/president/speeches>.*
+
+*"The American Presidency Project." The American Presidency Project. N.p., n.d. Web. 04 May 2016. <http://www.presidency.ucsb.edu/>.*
