@@ -21,5 +21,4 @@ To date, the results of the primaries have defied prediction after prediction fr
 >*make*
 
 
->####note: *runnning make produces two  json files (NJ_data.json and pres_wc.json) these are products of
-the two scrape funcitions and are necessary to run the mapper.py in the repo*	
+>####note: *runnning make produces two  json files (NJ_data.json and pres_wc.json) these are products of the two scrape funcitions and are necessary to run the mapper.py in the repo*	
