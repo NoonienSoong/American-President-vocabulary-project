@@ -13,10 +13,6 @@ import ast
 list_of_keys = ['"adams":', '"arthur":', '"bharrison":', '"buchanan":', '"bush":', '"carter":', '"cleveland":', '"clinton":', '"coolidge":', '"eisenhower":', '"fdroosevelt":', '"fillmore":', '"ford":', '"garfield":', '"grant":', '"gwbush":', '"harding":', '"harrison":', '"hayes":', '"hoover":', '"jackson":', '"jefferson":', '"johnson":', '"jqadams":', '"kennedy":', '"lbjohnson":', '"lincoln":', '{"madison":', '"mckinley":', '"monroe":', '"nixon":', '"obama":', '"pierce":', '"polk":', '"reagan":', '"roosevelt":', '"taft":', '"taylor":', '"truman":', '"tyler":', '"vanburen":', '"washington":', '"wilson":']
 list_of_pres = []
 
-def read_input(file):
-    for line in file:
-        # split the line into words
-        yield line
 
 """ This method converts a string that is in the proper form of a dictionary
 into a dictionary using the ast"""
@@ -32,11 +28,7 @@ def convert_string_into_dict(str_in_dict_form):
             split_string[i] = ' '.join(re.findall('[a-zA-Z1-9]',split_string[i])) + '])'
     
     string_to_tuple = list(ast.literal_eval(' '.join(split_string)))
-    return dict(string_to_tuple)       
-
-def emit(k, v):
-    pair = (k, len(v))
-    print(pair[0], pair[1])       
+    return dict(string_to_tuple)          
 
 def main():
     # input comes from STDIN
@@ -57,11 +49,13 @@ def main():
     # Get total word count for normalization
     total_wc = 0
     for m in range(len(squiggly)):
-        total_wc += len(squiggly[m])
+        total_wc += len(squiggly[m].split())
 
 
     for n in range(len(list_of_keys)):
-        print(list_of_keys[n], float(len(squiggly[n]))/ total_wc)       
+        uniq = len(Counter(squiggly[n].split()))
+        # Normalize and emit
+        print(list_of_keys[n], float(uniq)/total_wc)      
 
 
 if __name__ == "__main__":
